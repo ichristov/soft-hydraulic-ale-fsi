@@ -1,4 +1,19 @@
 .DS_Store
 .ipynb_checkpoints
 .venv
+.vscode
 not-ready-for-github
+# Auxiliary files from LaTeX compilation
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.lof
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.toc
+*.synctex.gz
