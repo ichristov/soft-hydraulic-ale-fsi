@@ -3,6 +3,7 @@
 .venv
 .vscode
 not-ready-for-github
+__pycache__
 
 ## https://github.com/github/gitignore/blob/main/TeX.gitignore
 ## Core latex/pdflatex auxiliary files:
