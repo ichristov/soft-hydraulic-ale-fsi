@@ -5,8 +5,8 @@ def build_mesh_with_gmsh(N=100,
                          inlet_refinement_solid_only=False,
                          interface_refinement=None):
     """
-    Build a 2D triangular mesh of [0, OMEGA_W] x [0, OMEGA_H] with Gmsh
-    respecting the fluid/solid interface at y = SOLID_BOTTOM
+    Build a 2D triangular FSI mesh (two superposed rectangles) with Gmsh,
+    respecting the fluid/solid interface at y = IFACE,
     and convert to XDMF format for use in dolfin.
 
     Author:
