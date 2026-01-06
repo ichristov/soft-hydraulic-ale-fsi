@@ -2,7 +2,6 @@
 .ipynb_checkpoints
 .venv
 .vscode
-.github
 not-ready-for-github
 __pycache__
 
