@@ -23,13 +23,15 @@ Simulate and analyze the deformation of a soft elastic wall driven by viscous (a
 
 ## Key features
 
-- Monolithic ALE-FSI discretization (fluid momentum + continuity + solid elasticity solved simultaneously)
-- Pressure-inlet / pressure-outlet boundary conditions (Neumann)
-- Carreau viscosity model for shear-thinning fluids
-- 2D-restricted neo-Hookean solid with isochoric–volumetric splitting for strong compression
-- Velocity-based damping in the solid for robust convergence to steady state
-- Gmsh-based meshing with tagged subdomains and boundary facets
-- Analytical steady-state benchmarks and Matplotlib post-processing
+- ALE-FSI discretization (fluid momentum + continuity + solid momentum + mesh motion coupled together)
+- Monolithic steady solver and quasi-directly coupled unsteady solver (monolithic solid+fluid, separate mesh motion)
+- Uses gmsh-based meshing with tagged subdomains and boundary facets
+- Allows both velocity-inlet and pressure-inlet, both with pressure-outlet boundary conditions
+- Implements Carreau viscosity model for shear-thinning fluids
+- Implements 2D-restricted neo-Hookean solid with isochoric–volumetric splitting to handle strong compression for confined elastic layers
+- Implements velocity-based damping in the unsteady solid momentum equation for robust convergence to steady state (if desired)
+- Offers analytical steady-state benchmarks
+- In-built post-processing and Matplotlib visualization
 
 ## Dependencies
 
