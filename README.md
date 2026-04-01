@@ -18,8 +18,7 @@ Simulate and analyze the deformation of a soft elastic wall driven by viscous (a
 | `strip_widgets.py` | Utility to strip notebook widget metadata before committing |
 | `dolfin-2019/` | Legacy solvers based on the original FEniCS (DOLFIN 2019) |
 | `theory_steady/` | Analytical theory notebooks for steady FSI (including shear-thinning models) |
-| `theory_oscillatory/` | Analytical theory notebooks for oscillatory/streaming FSI in channels and tubes |
-| `not-ready-for-github/` | Work-in-progress: adaptive time-stepping, FEniCSx conversion scripts, sample output |
+| `theory_oscillatory/` | Analytical theory notebooks for oscillatory/streaming FSI (elastoinertial rectification) in channels and tubes |
 
 ## Key features
 
