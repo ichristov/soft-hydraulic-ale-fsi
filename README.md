@@ -1,6 +1,6 @@
 # soft-hydraulic-ale-fsi
 
-Arbitrary Lagrangian&ndash;Eulerian fluid&ndash;structure interaction (FSI) solvers for **soft hydraulics** problems &mdash; pressure-driven flow sin compliant microchannels where the fluid and elastic solid are two-way coupled.
+Arbitrary Lagrangian&ndash;Eulerian fluid&ndash;structure interaction (FSI) solvers for [**soft hydraulics**](https://dx.doi.org/10.1088/1361-648X/ac327d) problems &mdash; pressure-driven flow sin compliant microchannels where the fluid and elastic solid are two-way coupled.
 
 Built on [FEniCSx / DOLFINx](https://github.com/fenics/dolfinx) and customized specifically for 2D problems, using quasi-direct coupling for unsteady problems and a monolithic approach for steady problems.
 
