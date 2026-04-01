@@ -11,7 +11,7 @@ Simulate and analyze the deformation of a soft elastic wall driven by viscous (a
 ## Repository contents
 
 | File / folder | Description |
-|---|---|
+| --- | --- |
 | `ALE-FSIx_2D.ipynb` | **Main transient solver** — time-dependent ALE-FSI simulation in DOLFINx |
 | `ALE-FSIx_2D_steady.ipynb` | **Steady solver** — monolithic steady ALE-FSI formulation |
 | `build_gmsh_x.py` | Mesh generation helper: two-subdomain (fluid + solid) rectangle mesh via gmsh, returns tagged DOLFINx mesh |
