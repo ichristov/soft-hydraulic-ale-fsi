@@ -34,10 +34,20 @@ Simulate and analyze the deformation of a soft elastic wall driven by viscous (a
 
 ## Dependencies
 
-- [FEniCSx / DOLFINx](https://github.com/fenics/dolfinx) (next-generation FEniCS)
+- [FEniCSx / DOLFINx](https://github.com/fenics/dolfinx) (next-generation FEniCS), see [this useful guide](https://me.jhu.edu/nguyenlab/doku.php?id=fenicsx) for setting it up and customizing your environment
 - [Gmsh](https://gmsh.info) Python API
 - PETSc / petsc4py, MPI / mpi4py
 - NumPy, SciPy, Matplotlib
+
+### Cautionary note for DOLFIN version
+
+To run the legacy codes from the `dolfin-2019` folder, it is recommended to use a fresh Conda environment, let's call it `fenics2019`, with this _precise_ command:
+
+```bash
+    conda create -n fenics2019 -c conda-forge fenics mshr
+```
+
+Any other installation order may result in `mshr` failing. Then, install any further Python tools and libraries through `pip install` rather than with `conda` to ensure that no dependencies get updated and break legacy `dolfin` and `mshr`. Complicated, I know. 😵‍💫
 
 ## Credits
 
