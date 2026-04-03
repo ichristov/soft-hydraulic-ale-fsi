@@ -4,11 +4,11 @@ Arbitrary Lagrangian&ndash;Eulerian fluid&ndash;structure interaction (FSI) solv
 
 Built on [FEniCSx / DOLFINx](https://github.com/fenics/dolfinx) and customized specifically for 2D problems, using quasi-direct coupling for unsteady problems and a monolithic approach for steady problems.
 
+![image of the computed deformation and velocity magnitude due to fluid-structure interaction in a 2D channel with a confined compliant wall](cover_image.png)
+
 ## Purpose
 
 Simulate and analyze the deformation of a soft elastic wall driven by viscous (and inertial) flow, targeting elastoinertial regimes relevant to microfluidics and soft robotics. The code supports both steady and transient problems, Newtonian and shear-thinning (Carreau) fluids, and benchmarking against analytical solutions.
-
-![image of the computed deformation and velocity magnitude due to fluid-structure interaction in a 2D channel with a confined compliant wall](cover_image.png)
 
 ## Repository contents
 
