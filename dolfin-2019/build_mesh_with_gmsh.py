@@ -1,9 +1,9 @@
-def build_mesh_with_gmsh(N=100,
-                         domain_size=[0.0, 1.0, 0.0, 1.0, 0.5],
-                         basename="fsi_rect",
-                         inlet_refinement=None,
-                         inlet_refinement_solid_only=False,
-                         interface_refinement=None):
+def build_2D_mesh_with_gmsh(N=100,
+                            domain_size=[0.0, 1.0, 0.0, 1.0, 0.5],
+                            basename="fsi_rect",
+                            inlet_refinement=None,
+                            inlet_refinement_solid_only=False,
+                            interface_refinement=None):
     """
     Build a 2D triangular FSI mesh (two superposed rectangles) with Gmsh,
     respecting the fluid/solid interface at y = IFACE,
