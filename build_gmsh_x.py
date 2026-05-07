@@ -577,6 +577,11 @@ def build_3D_tapered_cylinder_mesh_with_gmsh(
       - Solid wall:  a(z) <= r <= b(z)
       with linear tapers a(z), b(z) from z=0 to z=length.
 
+        Special cases:
+            - If a(0) == a(L), the fluid core is generated as a straight cylinder.
+            - If b(0) == b(L), the outer wall is generated as a straight cylinder.
+            These are handled natively (no caller-side perturbation needed).
+
     Parameters
     ----------
     N : int
@@ -635,9 +640,15 @@ def build_3D_tapered_cylinder_mesh_with_gmsh(
         gmsh.model.add("fsi_tapered_cylinder")
         occ = gmsh.model.occ
 
-        # Stage 1: Build inner/outer frusta and cut to form annular solid wall.
-        inner = occ.addCone(0.0, 0.0, z0, 0.0, 0.0, z1 - z0, r_inner_0, r_inner_l)
-        outer = occ.addCone(0.0, 0.0, z0, 0.0, 0.0, z1 - z0, r_outer_0, r_outer_l)
+        # Stage 1: Build inner/outer solids and cut to form annular solid wall.
+        # OpenCASCADE addCone raises when r0 == r1, so use cylinders for zero taper.
+        def _add_axisymmetric_solid(r0, r1):
+            if abs(r1 - r0) <= tol:
+                return occ.addCylinder(0.0, 0.0, z0, 0.0, 0.0, z1 - z0, r0)
+            return occ.addCone(0.0, 0.0, z0, 0.0, 0.0, z1 - z0, r0, r1)
+
+        inner = _add_axisymmetric_solid(r_inner_0, r_inner_l)
+        outer = _add_axisymmetric_solid(r_outer_0, r_outer_l)
         solid_cut, _ = occ.cut([(3, outer)], [(3, inner)], removeObject=True, removeTool=False)
         occ.synchronize()
 
