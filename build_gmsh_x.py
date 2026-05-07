@@ -4,6 +4,7 @@ Build Gmsh-generated FSI meshes for DOLFINx.
 This module provides:
     - 2D channel-style fluid+solid meshes split by a horizontal interface.
     - 3D tapered cylindrical fluid cores with annular solid walls.
+    - 3D rectangular fluid channels with a top elastic plate.
 
 Both builders return a DOLFINx mesh plus cell/facet MeshTags suitable for
 boundary-condition and variational-form assembly in ALE-FSI notebooks.
