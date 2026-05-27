@@ -8,7 +8,7 @@ Built on [FEniCSx / DOLFINx](https://github.com/fenics/dolfinx) and customized s
 
 ## Purpose
 
-Simulate and analyze the deformation of a soft elastic wall driven by viscous (and inertial) flow, targeting elastoinertial regimes relevant to microfluidics and soft robotics. The code supports both steady and transient problems, Newtonian and shear-thinning (Carreau) fluids, and benchmarking against analytical solutions.
+Simulate and analyze the deformation of a soft elastic wall driven by viscous (and inertial) flow, targeting elastoinertial regimes relevant to microfluidics and soft robotics. The code supports both steady and transient problems, generalized Newtonian fluids (for example, shear-thinning via Carreau viscosity model), and benchmarking against analytical solutions.
 
 ## Repository contents
 
@@ -19,7 +19,7 @@ Simulate and analyze the deformation of a soft elastic wall driven by viscous (a
 | `ALE-FSIx_3D_tapered_steady.ipynb` | **Steady solver** — monolithic steady ALE-FSI formulation for 3D cylindrical geometry (tapered fluid cylinder domain surrounded by tapered elastic cylinder domain and confined on the outside; type of "extruded tube" configuration) |
 | `build_gmsh_x.py` | Mesh generation helper: two-subdomain (fluid + solid) rectangle mesh via gmsh, returns tagged DOLFINx mesh; builtin examples include 2D confined layer, 3D tapered cylindrical channel with annular elastic wall, 3D rectangular fluid channel with a top elastic wall |
 | `strip_widgets.py` | Utility to strip notebook widget metadata before committing |
-| `dolfin-2019/` | Legacy solvers based on the original FEniCS (DOLFIN 2019) |
+| `dolfin-2019/` | Legacy solvers based on the original FEniCS (DOLFIN 2019) [⚠️ **not actively updated**] |
 | `theory_steady/` | Analytical theory notebooks for steady FSI (including shear-thinning models) |
 | `theory_oscillatory/` | Analytical theory notebooks for oscillatory/streaming FSI (elastoinertial rectification) in channels and tubes |
 
@@ -33,7 +33,7 @@ Simulate and analyze the deformation of a soft elastic wall driven by viscous (a
 - Implements neo-Hookean solid with isochoric–volumetric splitting to handle strong compression in corners, and special consideration for the 2D-restricted case
 - Implements velocity-based damping in the unsteady solid momentum equation for robust convergence to steady state (if desired)
 - Offers analytical steady-state benchmarks
-- In-built post-processing and Matplotlib visualization
+- Features in-built post-processing and Matplotlib visualization
 
 ## Dependencies
 
