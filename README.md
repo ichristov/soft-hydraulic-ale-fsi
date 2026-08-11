@@ -42,6 +42,10 @@ Simulate and analyze the deformation of a soft elastic wall driven by viscous (a
 - PETSc / petsc4py, MPI / mpi4py
 - NumPy, SciPy, Matplotlib
 
+### Google Colab
+
+If you'd like to run these codes in the cloud without configuring anything locally, check out the [FEM on Colab](https://fem-on-colab.github.io/) project.
+
 ### Cautionary note for DOLFIN version
 
 To run the legacy codes from the `dolfin-2019` folder, it is recommended to use a fresh Conda environment, let's call it `fenics2019`, with this _precise_ command:
