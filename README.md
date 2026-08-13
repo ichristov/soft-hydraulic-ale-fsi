@@ -44,7 +44,7 @@ Simulate and analyze the deformation of a soft elastic wall driven by viscous (a
 
 ### Google Colab
 
-If you'd like to run these codes in the cloud without configuring anything locally, check out the [FEM on Colab](https://fem-on-colab.github.io/) project.
+If you'd like to run these codes without a local Python configuration, check out the helpful [FEM on Colab](https://fem-on-colab.github.io/) project. With just a few lines of code, and a brief execution, you'll be solving solving soft hydraulics problems in the cloud in no time!
 
 ### Cautionary note for DOLFIN version
 
