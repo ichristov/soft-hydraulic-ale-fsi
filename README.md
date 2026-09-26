@@ -4,11 +4,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/ichristov/soft-hydraulic-ale-fsi)](https://github.com/ichristov/soft-hydraulic-ale-fsi/commits/main)
 
+![image of the computed deformation and velocity magnitude due to fluid-structure interaction in a 2D channel with a confined compliant wall](assets/cover_image.png)
+
 Arbitrary Lagrangian&ndash;Eulerian fluid&ndash;structure interaction (FSI) solvers for [**soft hydraulics**](https://tmnt-lab.org/soft-hydraulics.html) problems &mdash; pressure-driven flows in compliant microchannels where the fluid and elastic solid are two-way coupled.
 
 Built on [FEniCSx / DOLFINx](https://github.com/fenics/dolfinx) and customized specifically for internal flow problems, using quasi-direct coupling for unsteady problems and a monolithic approach for steady problems.
-
-![image of the computed deformation and velocity magnitude due to fluid-structure interaction in a 2D channel with a confined compliant wall](assets/cover_image.png)
 
 ## Purpose
 
