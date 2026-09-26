@@ -6,7 +6,7 @@
 
 Arbitrary Lagrangian&ndash;Eulerian fluid&ndash;structure interaction (FSI) solvers for [**soft hydraulics**](https://tmnt-lab.org/soft-hydraulics.html) problems &mdash; pressure-driven flows in compliant microchannels where the fluid and elastic solid are two-way coupled.
 
-Built on [FEniCSx / DOLFINx](https://github.com/fenics/dolfinx) and customized specifically for 2D problems, using quasi-direct coupling for unsteady problems and a monolithic approach for steady problems.
+Built on [FEniCSx / DOLFINx](https://github.com/fenics/dolfinx) and customized specifically for internal flow problems, using quasi-direct coupling for unsteady problems and a monolithic approach for steady problems.
 
 ![image of the computed deformation and velocity magnitude due to fluid-structure interaction in a 2D channel with a confined compliant wall](assets/cover_image.png)
 
@@ -26,9 +26,9 @@ The badges render a notebook in place, equations and stored outputs included &md
 | `build_gmsh_x.py` | Mesh generation helper: two-subdomain (fluid + solid) rectangle mesh via gmsh, returns tagged DOLFINx mesh; builtin examples include 2D confined layer, 3D tapered cylindrical channel with annular elastic wall, 3D rectangular fluid channel with a top elastic wall |
 | `strip_widgets.py` | Utility to strip notebook widget metadata before committing |
 | `environment.yml` | Conda environment for the solvers and theory notebooks (see [Environment file](#environment-file)) |
-| `dolfin-2019/`<br>[![nbviewer][nbv]](https://nbviewer.org/github/ichristov/soft-hydraulic-ale-fsi/tree/main/dolfin-2019/) | Legacy solvers based on the original FEniCS (DOLFIN 2019) [⚠️ **not actively updated**] |
-| `theory_steady/`<br>[![nbviewer][nbv]](https://nbviewer.org/github/ichristov/soft-hydraulic-ale-fsi/tree/main/theory_steady/) | Analytical theory notebooks for steady FSI (including shear-thinning models) |
-| `theory_oscillatory/`<br>[![nbviewer][nbv]](https://nbviewer.org/github/ichristov/soft-hydraulic-ale-fsi/tree/main/theory_oscillatory/) | Analytical theory notebooks for oscillatory/streaming FSI (elastoinertial rectification) in channels and tubes |
+| `dolfin-2019/` | Legacy solvers based on the original FEniCS (DOLFIN 2019) [⚠️ **not actively updated**] |
+| `theory_steady/` | Analytical theory notebooks for steady FSI (including shear-thinning models) |
+| `theory_oscillatory/` | Analytical theory notebooks for oscillatory/streaming FSI (elastoinertial rectification) in channels and tubes |
 
 ## Key features
 
