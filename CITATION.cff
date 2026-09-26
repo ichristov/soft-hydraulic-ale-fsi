@@ -1,0 +1,65 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+title: "soft-hydraulic-ale-fsi: Arbitrary Lagrangian--Eulerian fluid--structure interaction solvers for soft hydraulics"
+abstract: >-
+  Arbitrary Lagrangian-Eulerian (ALE) fluid-structure interaction solvers, built
+  on FEniCSx/DOLFINx, for soft hydraulics problems: pressure-driven flows in
+  compliant conduits in which a viscous (and inertial) flow and an elastic solid
+  are two-way coupled. Includes a transient quasi-direct solver and monolithic
+  steady solvers, generalized Newtonian (Carreau) fluids, a neo-Hookean solid,
+  and benchmarks against analytical soft-hydraulics theory.
+type: software
+authors:
+  - given-names: "Ivan C."
+    family-names: Christov
+    affiliation: "Purdue University"
+    orcid: "https://orcid.org/0000-0001-8531-0531"
+repository-code: "https://github.com/ichristov/soft-hydraulic-ale-fsi"
+url: "https://github.com/ichristov/soft-hydraulic-ale-fsi"
+license: MIT
+keywords:
+  - fluid-structure interaction
+  - soft hydraulics
+  - arbitrary Lagrangian-Eulerian
+  - finite element method
+  - FEniCSx
+  - DOLFINx
+  - microfluidics
+  - compliant microchannel
+  - elastoinertial flow
+version: "v0.2"
+date-released: "2026-09-26"
+# The *concept* DOI ("all versions"), so this line does not go stale at each
+# release; bump `version` and `date-released` above when tagging a new one.
+# The v0.2 release itself is 10.5281/zenodo.22970055.
+doi: "10.5281/zenodo.22970054"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22970054"
+    description: "Concept DOI for all versions of the software"
+# Work that used these solvers; add an entry per new paper. No `preferred-citation`,
+# so "Cite this repository" always resolves to the software rather than one paper.
+references:
+  - type: article
+    title: "Theory and simulation of elastoinertial rectification of oscillatory flows in two-dimensional deformable rectangular channels"
+    journal: "Physical Review Fluids"
+    volume: 11
+    start: "074102"  # APS article number, which takes the place of a page range
+    year: 2026
+    month: 7
+    doi: "10.1103/zk9v-13sn"
+    authors:
+      - given-names: "Uday M."
+        family-names: Rade
+      - given-names: "Shrihari D."
+        family-names: Pande
+      - given-names: "Ivan C."
+        family-names: Christov
+    identifiers:
+      - type: other
+        value: "arXiv:2505.22799"
+        description: "Preprint"
+      - type: doi
+        value: "10.4231/50C7-HK87"
+        description: "PURR dataset: simulation code and data"
+    notes: "Used the legacy dolfin-2019 solver, whose initial version was written for these simulations."

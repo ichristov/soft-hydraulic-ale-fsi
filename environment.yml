@@ -1,0 +1,55 @@
+# Conda environment for this repository: the FEniCSx/DOLFINx solvers
+# (ALE-FSIx_*.ipynb, build_gmsh_x.py) and the analytical theory notebooks.
+#
+#   conda env create -f environment.yml
+#   conda activate fenicsx
+#
+# This is the only environment file here. There is no requirements.txt, because
+# DOLFINx is not meaningfully installable from PyPI, so a pip file could never
+# cover the solvers.
+#
+# Only three constraints, all deliberate:
+#   * DOLFINx 0.10.*, the series the solvers are tested against; earlier versions
+#     differ enough in API that the notebooks will not run unmodified.
+#   * numpy >= 2, required rather than preferred: the notebooks use
+#     numpy.trapezoid, which replaced numpy.trapz in NumPy 2.0, with no fallback.
+#   * gmsh 4.15.*, the tested Gmsh Python API.
+# Everything else floats, so conda can pick a mutually consistent set.
+#
+# This environment does NOT cover the legacy dolfin-2019/ solvers. Those need a
+# separate, carefully ordered environment -- see "Cautionary note for DOLFIN
+# version" in README.md. Do not add them here; mixing the two breaks both.
+name: fenicsx
+channels:
+  - conda-forge
+  # Keep the `defaults` channel out, even if your .condarc adds it: mixing it
+  # with conda-forge is a common way to end up with a broken FEniCS install.
+  - nodefaults
+dependencies:
+  - python=3.11
+  # Only DOLFINx is pinned; basix, ufl, ffcx, PETSc and MPI come in with it at
+  # mutually compatible versions. basix, ufl, petsc4py and mpi4py are listed
+  # because the notebooks import them directly.
+  - fenics-dolfinx=0.10.*
+  - fenics-basix
+  - fenics-ufl
+  - petsc4py
+  - mpi4py
+  - adios4dolfinx  # checkpointing of DOLFINx functions
+  - numpy>=2.0
+  - scipy
+  - matplotlib
+  - pyvista  # 3D plotting in ALE-FSIx_3D_tapered_steady.ipynb
+  # For the analytical theory notebooks (theory_steady/, theory_oscillatory/),
+  # which need no finite element stack of their own.
+  - sympy
+  - scikit-learn
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+  - pip
+  - pip:
+      # Gmsh's own wheel bundles the SDK and supplies the `gmsh` Python module.
+      # This is what the tested environment uses; the conda-forge `python-gmsh`
+      # package is an alternative if you prefer an all-conda install.
+      - gmsh==4.15.*
