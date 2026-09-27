@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata from this file."
-title: "soft-hydraulic-ale-fsi: Arbitrary Lagrangian--Eulerian fluid--structure interaction solvers for soft hydraulics"
+title: "soft-hydraulic-ale-fsi: Arbitrary Lagrangian–Eulerian fluid–structure interaction solvers for soft hydraulics"
 abstract: >-
-  Arbitrary Lagrangian-Eulerian (ALE) fluid-structure interaction solvers, built
+  Arbitrary Lagrangian–Eulerian (ALE) fluid–structure interaction solvers, built
   on FEniCSx/DOLFINx, for soft hydraulics problems: pressure-driven flows in
   compliant conduits in which a viscous (and inertial) flow and an elastic solid
   are two-way coupled. Includes a transient quasi-direct solver and monolithic
