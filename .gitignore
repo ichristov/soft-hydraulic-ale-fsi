@@ -51,3 +51,6 @@ __pycache__
 *.pdfsync
 *.rubbercache
 rubber.cache
+
+# figures written by the notebooks (not tracked)
+theory_oscillatory/*.pdf
